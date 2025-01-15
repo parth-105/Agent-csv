@@ -21,7 +21,7 @@ function App() {
     formData.append('file', file);
 
     try {
-      const response = await axios.post("http://127.0.0.1:8000/upload", formData, {
+      const response = await axios.post("https://csv-backend-t9i5.onrender.com/upload", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       // const response = await fetch('http://127.0.0.1:8000/upload', {
@@ -43,7 +43,7 @@ function App() {
     setIsAnalyzing(true);
     try {
       console.log('q', query)
-      const result = await axios.post("http://127.0.0.1:8000/query", { query });
+      const result = await axios.post("https://csv-backend-t9i5.onrender.com/query", { query });
       // setResponse(result.data);
 
       // const response = await fetch('http://localhost:8000/query', {
