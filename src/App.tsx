@@ -61,7 +61,7 @@ function App() {
       setResponse(result.data)
       setAnalysisHistory((prev) => [...prev, { question: query, answer: result.data.analysis_result, success: result.data.insights }]);
     } catch (error) {
-      alert((error as Error).message || 'An error occurred during analysis');
+      alert('Please try again with same question and it take some time');
     } finally {
       setIsAnalyzing(false);
       setQuestion('');
